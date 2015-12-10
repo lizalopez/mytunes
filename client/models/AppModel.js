@@ -29,6 +29,13 @@ var AppModel = Backbone.Model.extend({
       //console.log(' triggered! songQueue');
     }, this);
 
+    params.library.on('upvote', function(song) {
+      //this.set('currentSong', song);
+      this.get('songQueue').addSong(song);
+
+      //console.log(' triggered! songQueue');
+    }, this);
+
     this.get('songQueue').on('removeSong', function(song) {
       // console.log('dqing');
       this.get('songQueue').remove(song);
