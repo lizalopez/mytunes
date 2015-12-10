@@ -2,7 +2,10 @@
 var SongQueue = Songs.extend({
 
   initialize: function() {
-    this.model.on();
+    this.on('change', this.removeSong , this);
+  },
+  removeSong: function(song) {
+    this.remove(song);
   }
 
 });
