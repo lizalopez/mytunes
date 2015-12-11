@@ -1,0 +1,15 @@
+#wave {
+  display: block;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+th {
+  font-weight: 400px;
+  font-size: 20px;
+  color: #9FFF2A;
+}

@@ -3,17 +3,24 @@ var LibraryEntryView = Backbone.View.extend({
 
   tagName: 'tr',
 
-  template: _.template('<td><%= artist %> - </td><td><%= title %></td><td><%= playCount %></td><td><%= upvotes %></td>'),
+  template: _.template('<td><%= artist %> - </td><td class=title ><%= title %></td><td><%= playCount %></td><td><i class="fa fa-plus-square"></i> <i class="fa fa-minus-square"></i> <%= upvotes %></td>'),
 
   events: {
-    'click': function() {
+    'click .title': function() {
       //this.model.play();
       this.model.enqueue();
       //console.log("enqueue");
     },
+    'click .fa-plus-square': function () {
+      this.model.upvote();
+    },
+    'click .fa-minus-square': function () {
+      this.model.downvote();
+    }
   },
   initialize: function(){
     this.model.on('change:playCount', this.render, this);
+    this.model.on('change:upvotes', this.render, this);
   },
 
   render: function(){

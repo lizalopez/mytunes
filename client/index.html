@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <div id="wave"></div>
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/wavesurfer.min.js"></script>
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="app.css">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,700italic' rel='stylesheet' type='text/css'>
 
     <script src="data/data.js"></script>
 
@@ -20,6 +25,7 @@
     <script src="views/AppView.js"></script>
     <script src="views/SongQueueView.js"></script>
     <script src="views/SongQueueEntryView.js"></script>
+    <script src="views/WaveSurferView.js"></script>
 
     <script>
       $(function() {

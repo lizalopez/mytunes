@@ -34,6 +34,7 @@ var SongModel = Backbone.Model.extend({
     console.log(this.get('playCount'));
   },
   upvote: function(){
+    console.log('upvoting');
     this.set('upvotes', this.get('upvotes')+1);
   },
   downvote: function(){
